@@ -31,7 +31,8 @@ namespace TutorialMVC4.Controllers
         [HttpPost]
         public JsonResult AddInfo(InfoModel Entity)
         {
-            using(SqlConnection con = new SqlConnection(SqlConnectionString))
+
+            using (SqlConnection con = new SqlConnection(SqlConnectionString))
             {
                 using (SqlCommand cmd = new SqlCommand())
                 {
@@ -45,7 +46,7 @@ namespace TutorialMVC4.Controllers
 
                 }
             }
-            return Json("Success");
+            return Json(Entity);
 
         }
     }
