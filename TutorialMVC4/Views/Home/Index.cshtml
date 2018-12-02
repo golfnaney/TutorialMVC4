@@ -1,0 +1,26 @@
+﻿@model List<TutorialMVC4.Models.Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table table-responsive">
+    <tr>
+        <th>รหัสสินค้า</th>
+        <th>ชื่อสินค้า</th>
+        <th>รายละเอียด</th>
+        <th>ราคา</th>
+        <th>รูปภาพ</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+    <tr>
+        <td>@item.ID</td>
+        <td>@item.Name</td>
+        <td>@item.Desc</td>
+        <td>@item.Price</td>
+        <td><img class="img-responsive" style="max-width:100px"  src="@item.Url" alt="@item.Url" /></td>
+
+    </tr>
+    }
+</table>
+

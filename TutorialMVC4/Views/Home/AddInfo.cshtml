@@ -1,0 +1,17 @@
+﻿@model TutorialMVC4.Models.InfoModel
+
+@{
+    ViewBag.Title = "AddInfo";
+}
+
+<h2>AddInfo</h2>
+
+@using (Html.BeginForm("AddInfor", "Home", FormMethod.Post))
+{
+    @Html.Label("iblName", "Name")
+    @Html.EditorFor(m => m.Name)
+    @Html.Label("iblCity", "City")
+    @Html.EditorFor(m => m.City)
+}
+
+<input type="submit" value="Insert" />
